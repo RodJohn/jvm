@@ -6,6 +6,210 @@
 # 内存溢出VS内存泄露
 
 
+内存溢出
+
+    就是你要求分配的java虚拟机内存超出了系统能给你的，系统不能满足需求，于是产生溢出。
+    
+内存泄漏
+    
+    是指你向系统申请分配内存进行使用(new)，可是使用完了以后却不归还(delete)，
+    结果你申请到的那块内存你自己也不能再访问,该块已分配出来的内存也无法再使用，
+    随着服务器内存的不断消耗，而无法使用的内存越来越多，系统也不能再次将它分配给需要的程序，产生泄露。
+    一直下去，程序也逐渐无内存使用，就会溢出。
+
+
+
+# 程序计算器 
+
+    所在的内存区域是唯一一个JVM规范中没有规定OOMError的内存区域
+
+# JVM栈
+
+    JVM规范中，该区域中有两个异常状况： 
+    -StackOverflowError:线程请求的栈深度超过了JVM栈所允许的栈深度 
+    -OutOfMemoryError:如果JVM栈是动态可扩展的，在无法申请到足够内存时，抛出该异常
+
+
+# 本地方法栈
+  
+    会有两种异常StackOverFlowError和 OutOfMemoneyError。当线程请求栈深度大于虚拟机所允许的深度就会抛出StackOverFlowError错误；虚拟机栈动态扩展，当扩展无法申请到足够的内存空间时候，抛出OutOfMemoneyError。
+
+# Java堆溢出示例
+
+VM参数
+
+    -Xms:20M:java堆最小20M 
+    -Xmx:20M:java堆最大20M（避免动态扩展） 
+    -XX:+HeapDumpOnOutOfMemoryError:开启该选项，
+    
+代码
+
+    public class HeapOOM {
+        static class OOMObject{ 
+        }
+    
+        public static void main(String[] args) {
+            List<OOMObject> list = new  ArrayList<OOMObject>();
+            while(true){
+                list.add(new OOMObject());
+            }
+        }
+    }
+    
+    
+    java.lang.OutOfMemoryError: Java heap space
+    Dumping heap to java_pid3576.hprof ...
+    Heap dump file created [34233497 bytes in 0.301 secs]
+    Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.util.Arrays.copyOf(Arrays.java:2760)
+        at java.util.Arrays.copyOf(Arrays.java:2734)
+        at java.util.ArrayList.ensureCapacity(ArrayList.java:167)
+        at java.util.ArrayList.add(ArrayList.java:351)
+        at study.hard.jjzhu.HeapOOM.main(HeapOOM.java:20)
+    
+# JVM栈和本地方法栈溢出
+
+    HotSpot虚拟机并没有区分JVM和本地方法栈。
+    在HotSpot虚拟机中可以通过制定-Xss参数来指定栈的大小。
+    
+    
+VM Args
+
+    -Xss128k
+    
+代码
+
+    public class JavaVMStackSOF {
+        private int stackLength = 1;
+        public void stackLeak(){
+            stackLength ++;
+            //递归调用
+            stackLeak();
+    
+        }
+    
+        public static void main(String[] args) throws Throwable {
+            JavaVMStackSOF oom = new JavaVMStackSOF();
+            try{
+                oom.stackLeak();
+            }catch(Throwable e){
+                System.out.println("stack deep:" + oom.stackLength);
+                throw e;
+            }
+        }
+    }
+    
+    stack deep:1007
+    Exception in thread "main" java.lang.StackOverflowError
+        at study.hard.jjzhu.memory.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:13)
+        at study.hard.jjzhu.memory.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:15)
+        at study.hard.jjzhu.memory.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:15)
+        at study.hard.jjzhu.memory.JavaVMStackSOF.stackLeak(JavaVMStackSOF.java:15)
+ 
+ 
+# 运行时常量池溢出
+    
+VM Args
+
+    -XX:PermSize=10M -XX:MaxPermSize=10M
+
+代码
+
+    public class RuntimeConstantPoolOOM {
+        public static void main(String[] args) {
+            List<String> list = new ArrayList<String>();
+            int i = 0 ;
+            while(true){
+                /* 
+                 * String.intern()是一个Native方法，作用是:如果字符串常量池中已经包含一个等价于此String
+                 * 对象的字符串，则返回常量池中这个字符串的String对象，否则，将此String对象包含的字符串添加到常量池中，
+                 * 并返回此String对象的引用
+                */
+                list.add(String.valueOf(i++).intern());
+            }
+        }
+    }
+    
+    >运行结果：
+    1.6
+    Exception in thread "main" java.lang.OutOfMemoryError: PermGen space
+        at java.lang.String.intern(Native Method)
+        at study.hard.jjzhu.memory.RuntimeConstantPoolOOM.main(RuntimeConstantPoolOOM.java:23)
+    1.7/1.8
+        java.lang.OutOfMemoryError: java heap space
+        
+        
+# 直接内存溢出
+  
+    本机直接内存可以通过 -XX:MaxDirectMemorySize指定内存大小，
+    若不指定，则默认与java堆得最大值一样。
+
+VM Args: 
+
+    -Xmx20M -XX:MaxDirectMemorySize=20M
+
+代码
+
+    public class DirectMemoryOOM {
+        private static final int _1MB = 1024 * 1024;
+        public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException {
+            Field unsafeField = Unsafe.class.getDeclaredFields()[0];
+            unsafeField.setAccessible(true);
+            Unsafe unsafe = (Unsafe)unsafeField.get(null);
+            while(true){
+                unsafe.allocateMemory(_1MB);
+            }
+        }
+    }
+    Exception in thread "main" java.lang.OutOfMemoryError
+        at sun.misc.Unsafe.allocateMemory(Native Method)
+        at study.hard.jjzhu.memory.DirectMemoryOOM.main(DirectMemoryOOM.java:21)
+
+# 元空间溢出
+
+VM args
+
+    1.7的PermGen默认空间为85 MB（或者可以通过-XX:MaxPermSize=XXXm指定）
+    1.8的Metaspace空间：128MB（-XX:MaxMetaspaceSize=128m）
+    
+
+代码
+
+    public class ClassA {
+     public void method(String name) {
+      // do nothing
+     }
+    }
+    
+    public class OOMTest {
+        public static void main(String[] args) {
+            try {
+                //准备url
+                URL url = new File("D:/classes").toURI().toURL();
+                URL[] urls = {url};
+                //获取有关类型加载的JMX接口
+                ClassLoadingMXBean loadingBean = ManagementFactory.getClassLoadingMXBean();
+                //用于缓存类加载器
+                List<ClassLoader> classLoaders = new ArrayList<ClassLoader>();
+                while (true) {
+                    //加载类型并缓存类加载器实例
+                    ClassLoader classLoader = new URLClassLoader(urls);
+                    classLoaders.add(classLoader);
+                    classLoader.loadClass("ClassA");
+                    //显示数量信息（共加载过的类型数目，当前还有效的类型数目，已经被卸载的类型数目）
+                    System.out.println("total: " + loadingBean.getTotalLoadedClassCount());
+                    System.out.println("active: " + loadingBean.getLoadedClassCount());
+                    System.out.println("unloaded: " + loadingBean.getUnloadedClassCount());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    java.lang.OutOfMemoryError: PermGen space
+    java.lang.OutOfMemoryError: Metaspace
 
 # 参考
 
