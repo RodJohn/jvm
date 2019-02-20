@@ -9,6 +9,38 @@
      深入理解JVM ＆ G1 GC
      揭秘Java虚拟机
     Java程序性能优化
+    http://www.iocoder.cn/Books/Java-Virtual-Machine-books-recommended/
+    
+    
+    
+# 内存区域
+
+    运行时数据区 
+    
+    程序计数器
+    方法区
+        元空间
+        运行时常量池
+    本地方法栈
+    栈
+    堆
+    
+    直接内存
+    
+        参考
+        https://juejin.im/post/5c3b1e5a51882522c03e812f
+        https://juejin.im/post/5adefec26fb9a07ac85a0dea
+        https://www.hollischuang.com/archives/80
+
+# 内存分配
+    
+    策略
+    
+    本地线程缓存
+    栈上分配
+    堆上分代分配
+    
+    HSDB分析内存分配
     
 
 
@@ -20,32 +52,13 @@
     https://juejin.im/post/5b04d7aef265da0ba063834f
     
 
-运行时内存区域
 
-    程序计数器
-    栈
-    本地方法栈
-    堆
-    本地方法区
-    特殊 
-        常量池
-        直接内存
-        方法区、元空间
-
-    参考
-        https://juejin.im/post/5c3b1e5a51882522c03e812f
-        https://juejin.im/post/5adefec26fb9a07ac85a0dea
-        https://www.hollischuang.com/archives/80
         
         
         内存溢出、
 
-内存分配
-    
 
-    策略
-    
-    
+     
 
 
 垃圾回收
