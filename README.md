@@ -8,8 +8,13 @@
     
 
 
-# 概览
+# 内存管理
 
+
+参考
+
+    https://juejin.im/post/5b04d7aef265da0ba063834f
+    
 
 运行时内存区域
 
@@ -26,12 +31,17 @@
     参考
         https://juejin.im/post/5c3b1e5a51882522c03e812f
         https://juejin.im/post/5adefec26fb9a07ac85a0dea
+        https://www.hollischuang.com/archives/80
+        
+        
+        内存溢出、
 
-对象创建
+内存分配
+    
 
-内存分配策略
-
-
+    策略
+    
+    
 
 
 垃圾回收
@@ -72,38 +82,65 @@
          参考
             https://juejin.im/post/5c6378796fb9a049cd54b01d
             
-            
-            
 
-调优
+# 类文件
+
+    类文件结构
+        常量池
+        
+    字节码指令
+    
+# 类加载
+
+    加载时机
+    
+    加载过程
+        加载
+        验证
+        解析
+        准备
+        https://www.cnblogs.com/ygj0930/p/6536048.html
+        
+        类的生命周期
+        
+    类加载器
+       
+        双亲委派模式
+        
+
+
+# 执行引擎
+    
+    运行时栈帧
+    
+    方法调用
+
+
+# 优化
+
+编译器优化
+
+运行期优化
+
+
+# 调优
     
     can
 
 
 
-调优和实战
-
-类文件结构
-
-类加载机制
-
-字节码运行
-
-代码编译和优化
-
-并发
+# 并发
 
     内存模型
     
+        https://www.jianshu.com/p/a463e23aedd5
+    
     参考
         https://juejin.im/post/5c67d4f7e51d45403f2a9fd5
+        https://www.hollischuang.com/archives/1003
 
 
 
-
-
-    发展
-    
   
   
 
@@ -114,7 +151,7 @@
 
     
 
-https://www.cnblogs.com/ygj0930/p/6536048.html
+
 
 
 
