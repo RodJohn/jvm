@@ -26,10 +26,11 @@
 - [直接内存](https://github.com/RodJohn/JVM/blob/master/md/207_%E7%9B%B4%E6%8E%A5%E5%86%85%E5%AD%98.md)
 - [内存错误](https://github.com/RodJohn/JVM/blob/master/md/210_%E5%86%85%E5%AD%98%E9%94%99%E8%AF%AF.md)
 
+# 垃圾回收
 
-    [垃圾回收]()
-    [存活算法]()
-    [finalize]()
+    [垃圾回收]()  
+    [存活算法]()  
+    [finalize]()  
     [回收算法]()
     [实现](https://github.com/RodJohn/JVM/blob/master/md/225_%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0.md)
     [垃圾回收器]()
