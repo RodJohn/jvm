@@ -13,24 +13,22 @@
     
     
     
-# 内存区域
+# 运行时数据区
 
-    运行时数据区 
+    [运行时数据区](https://github.com/RodJohn/JVM/blob/master/md/201_%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F.md)
+    [程序计数器](https://github.com/RodJohn/JVM/blob/master/md/202_%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8)
+    [虚拟机栈](https://github.com/RodJohn/JVM/blob/master/md/203_%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88.md)
+    [本地方法栈](https://github.com/RodJohn/JVM/blob/master/md/204_%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%88.md)
+    [堆](https://github.com/RodJohn/JVM/blob/master/md/205_%E5%A0%86.md)
+    [方法区](https://github.com/RodJohn/JVM/blob/master/md/206_%E6%96%B9%E6%B3%95%E5%8C%BA.md)
+    [运行时常量池](https://github.com/RodJohn/JVM/blob/master/md/208_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0.md)
+    [直接内存](https://github.com/RodJohn/JVM/blob/master/md/207_%E7%9B%B4%E6%8E%A5%E5%86%85%E5%AD%98.md)
+
+
     
-    程序计数器
-    方法区
-        元空间
-        运行时常量池
-    本地方法栈
-    栈
-    堆
-    
-    直接内存
-    
-        参考
-        https://juejin.im/post/5c3b1e5a51882522c03e812f
-        https://juejin.im/post/5adefec26fb9a07ac85a0dea
-        https://www.hollischuang.com/archives/80
+    []()
+    []()
+
 
 # 内存分配
     
