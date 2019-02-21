@@ -21,13 +21,20 @@
 - [本地方法栈](https://github.com/RodJohn/JVM/blob/master/md/204_%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%88.md)
 - [堆](https://github.com/RodJohn/JVM/blob/master/md/205_%E5%A0%86.md)
 - [方法区](https://github.com/RodJohn/JVM/blob/master/md/206_%E6%96%B9%E6%B3%95%E5%8C%BA.md)
-- [运行时常量池](https://github.com/RodJohn/JVM/blob/master/md/208_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0.md)
+- - [运行时常量池](https://github.com/RodJohn/JVM/blob/master/md/208_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0.md)
+- - [运行时常量池实例](https://github.com/RodJohn/JVM/blob/master/md/209_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%AE%9E%E4%BE%8B.md)
 - [直接内存](https://github.com/RodJohn/JVM/blob/master/md/207_%E7%9B%B4%E6%8E%A5%E5%86%85%E5%AD%98.md)
+- [内存错误](https://github.com/RodJohn/JVM/blob/master/md/210_%E5%86%85%E5%AD%98%E9%94%99%E8%AF%AF.md)
 
 
-    
-    []()
-    []()
+    [垃圾回收]()
+    [存活算法]()
+    [finalize]()
+    [回收算法]()
+    [实现](https://github.com/RodJohn/JVM/blob/master/md/225_%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0.md)
+    [垃圾回收器]()
+    [G1]()
+    [优化]()
 
 
 # 内存分配
@@ -50,53 +57,6 @@
     https://juejin.im/post/5b04d7aef265da0ba063834f
     
 
-
-        
-        
-        内存溢出、
-
-
-     
-
-
-垃圾回收
-    回收区域
-        堆、方法区
-         https://juejin.im/post/5c68fb65e51d4539a642594f
-    存活算法
-        引用计数算法
-        可达性分析算法
-        
-        参考
-            https://juejin.im/post/5c4520975188252620583972
-    回收算法
-   
-        标记清除
-        复制
-        标记整理
-        分代
-        
-        STW
-            标记
-            Safepoint
-        
-        
-        参考
-            https://juejin.im/post/5c498c9ae51d4506d613cb7a
-    回收器
-        分代收集器
-            serial
-            serial old
-            ParNew
-            Parallel Scavenge
-            Parallel Old
-            CMS
-            顾吞吐量和停顿时间
-         G1
-            
-         参考
-            https://juejin.im/post/5c6378796fb9a049cd54b01d
-            
 
 # 类文件
 
