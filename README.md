@@ -28,15 +28,17 @@
 
 # 垃圾回收
 
-- [垃圾回收]()  
-- [存活算法]()  
-- [finalize]()  
-    
- - [回收算法](https://github.com/RodJohn/JVM/blob/master/md/224_%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95.md)
+ - [垃圾回收](https://github.com/RodJohn/JVM/blob/master/md/220_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.md)  
+ - 存活判断算法
+ - - [引用计数、可达性分析算法](https://github.com/RodJohn/JVM/edit/master/md/221_%E5%AD%98%E6%B4%BB%E7%AE%97%E6%B3%95.md)     
+ - - [可达性分析法实现](https://github.com/RodJohn/JVM/blob/master/md/225_%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E6%B3%95%E5%AE%9E%E7%8E%B0.md)
+ - 回收算法
  - - [标记清除、复制、标记整理算法](https://github.com/RodJohn/JVM/blob/master/md/224_%E5%9F%BA%E7%A1%80%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95.md)
  - - [分代收集算法](https://github.com/RodJohn/JVM/blob/master/md/229_%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95.md)
  
- - [实现](https://github.com/RodJohn/JVM/blob/master/md/225_%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0.md)
+ 
+ - [finalize]()  
+ 
  - [垃圾回收器]()
  - [G1]()
  - [优化]()
