@@ -23,5 +23,40 @@
     -XX:+PrintTLAB可以跟踪TLAB的使用情况。一般不建议手工修改TLAB相关参数，推荐使用虚拟机默认行为。
   
  
- 
+ @[TOC]
+
+# 线程本地缓存
+
+定义
+
+	线程本地缓存（Thread Local Allocation Buffer）
+	是线程在堆中私有的一块内存
+
+原理
+
+    对象一般会分配在堆eden区上，而堆是所有线程共享的，因此在堆上分配内存需要加锁，
+    而TLAB是线程私有的，分配内存不需要加锁，可以提高效率。
+    因此JVM在给线程中的对象分配内存时会尽量在TLAB上分配。
+    如果对象过大或TLAB用完，则仍然在堆上进行分配。    
+
+
+
+特点
+
+    小区域
+
+运用
+
+	在Hotspot 1.6的实现中引入了TLAB技术
+	TLAB默认是开启的，
+		参数-XX:+UseTLAB用于显示开启。
+	TLAB默认仅占有整个Eden空间的1%，
+		通过选项-XX:TLABWasteTargetPercent克设置百分比大小。  
+	 -XX:+PrintTLAB可以跟踪TLAB的使用情况。
+	 一般不建议手工修改TLAB相关参数，推荐使用虚拟机默认行为。
+
+# 参考
+
+https://www.jianshu.com/p/cd85098cca39
+
  
