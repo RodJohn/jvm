@@ -36,11 +36,24 @@
  - - [标记清除、复制、标记整理算法](https://github.com/RodJohn/JVM/blob/master/md/224_%E5%9F%BA%E7%A1%80%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95.md)
  - - [分代收集算法](https://github.com/RodJohn/JVM/blob/master/md/229_%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95.md)
  
+ - [垃圾回收器](https://github.com/RodJohn/JVM/edit/master/md/226_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.md)
+ - - [serial、parnew、parallel scravenge](https://github.com/RodJohn/JVM/blob/master/md/230_%E6%96%B0%E7%94%9F%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8.md)
+ - - [serialOld、paralleOld、CMS](https://github.com/RodJohn/JVM/blob/master/md/231_%E8%80%81%E5%B9%B4%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8.md)
  
+ - [G1](https://github.com/RodJohn/JVM/blob/master/md/227_G1.md)
  - [finalize]()  
  
- - [垃圾回收器]()
- - [G1]()
+ # 对象
+ 
+ - [对象分配]()
+ -- [本地线程缓冲区分配]()
+ -- [栈上分配]()
+ -- [大对象直接进入老年代]()
+ -- [分配在Eden中]()
+ -- [长期存活的对象进入老年代]()
+ -- [动态判定对象年龄]()
+ -- [空间分配担保]()
+ 
  - [优化]()
 
 
