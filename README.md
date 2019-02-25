@@ -43,7 +43,7 @@
  - [G1](https://github.com/RodJohn/JVM/blob/master/md/227_G1.md)
  - [finalize]()  
  
- # 对象
+ # 对象分配
  
  - [对象分配]()
  -- [本地线程缓冲区分配]()
@@ -55,27 +55,7 @@
  -- [空间分配担保]()
  
  - [优化]()
-
-
-# 内存分配
-    
-    策略
-    
-    本地线程缓存
-    栈上分配
-    堆上分代分配
-    
-    HSDB分析内存分配
-    
-
-
-# 内存管理
-
-
-参考
-
-    https://juejin.im/post/5b04d7aef265da0ba063834f
-    
+ - [HSDB分析内存分配]()
 
 
 # Class文件
@@ -100,20 +80,7 @@
 - - []()
 - - []()
 
-    加载过程
-        加载
-        验证
-        解析
-        准备
-        https://www.cnblogs.com/ygj0930/p/6536048.html
-        
-        类的生命周期
-        
-    类加载器
        
-        双亲委派模式
-        
-
 
 # 执行引擎
     
@@ -144,18 +111,6 @@
     参考
         https://juejin.im/post/5c67d4f7e51d45403f2a9fd5
         https://www.hollischuang.com/archives/1003
-
-
-
-  
-  
-
-    
-
-# JVM
-
-
-    
 
 
 
