@@ -1,6 +1,4 @@
 
-
-
 # 概述
 
 作用
@@ -20,7 +18,7 @@
 
 ## access_flags
 
-	字段修饰符
+	访问修饰符
 	
 	特有 volatile transient
 	接口的字段会默认添加public 
