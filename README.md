@@ -76,7 +76,7 @@
 - - [加载阶段](https://github.com/RodJohn/JVM/blob/master/md/311_loadstage.md)
 - - [链接阶段](https://github.com/RodJohn/JVM/blob/master/md/312_linkstage.md)
 - - [初始化阶段](https://github.com/RodJohn/JVM/blob/master/md/313_initstage.md)
-- [类加载器](https://github.com/RodJohn/JVM/edit/master/md/320_ClassLoder.md)
+- [类加载器](https://github.com/RodJohn/JVM/blob/master/md/320_ClassLoder.md)
 - - []()
 - - []()
 
