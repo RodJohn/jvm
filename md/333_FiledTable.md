@@ -13,9 +13,10 @@
 
 	由字段计数器和字段集合组成
 
+
 # 字段格式
 
-![在这里插入图片描述](https://img-blog.csdn.net/20181022114218469?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvZF9qb2hu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable1.png)
 
 ## access_flags
 
@@ -23,11 +24,10 @@
 	
 	特有 volatile transient
 	接口的字段会默认添加public 
-		
-![在这里插入图片描述](https://img-blog.csdn.net/20181022115439155?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvZF9qb2hu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 
 
+![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable2.png)
 
 
 ## name_index
@@ -35,18 +35,20 @@
 	字段的简单名称
 	指没有类型字段名称
 	如变量 private final static int m 简单名称为 m。
+  
+
 		
 ## descriptor_index
 
 	描述符用于描述字段的数据类型
 	
-![在这里插入图片描述](https://img-blog.csdn.net/20181022115629343?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvZF9qb2hu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-	
+
 	对于数组类型，
 	每一维度将使用一个前置的“[”字符来描述，
 	如一个整数数组“int [][]”将为记录为“[[I”，
 	而一个String类型的数组“String[]”将被记录为“[Ljava/lang/String”
 
+![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable3.png)  
 
 
 ## attribute
@@ -79,6 +81,6 @@ public class User {
 }
 ```
 
-![在这里插入图片描述](https://img-blog.csdn.net/20181022164643442?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvZF9qb2hu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable4.png)
 
-![在这里插入图片描述](https://img-blog.csdn.net/20181022164718441?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3JvZF9qb2hu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable5.png)
