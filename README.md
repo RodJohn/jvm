@@ -86,13 +86,20 @@
  - - [访问标识、继承关系](https://github.com/RodJohn/JVM/blob/master/md/338_AccessFlag.md)
  - - [字段表](https://github.com/RodJohn/JVM/blob/master/md/333_FiledTable.md)
  - - [方法表](https://github.com/RodJohn/JVM/blob/master/md/335_MethodTable.md)
+ - [字节码指令]()
  - - []()
  
     
 # 类加载
 
-    加载时机
-    
+- [类加载](https://github.com/RodJohn/JVM/edit/master/md/310_ClassLoad.md)
+- - [加载阶段](https://github.com/RodJohn/JVM/blob/master/md/311_loadstage.md)
+- - [链接阶段](https://github.com/RodJohn/JVM/blob/master/md/312_linkstage.md)
+- - [初始化阶段](https://github.com/RodJohn/JVM/blob/master/md/313_initstage.md)
+- [类加载器](https://github.com/RodJohn/JVM/edit/master/md/320_ClassLoder.md)
+- - []()
+- - []()
+
     加载过程
         加载
         验证
