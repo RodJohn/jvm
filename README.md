@@ -83,12 +83,13 @@
 
 # 执行引擎
 
-- [栈帧]()
-- - [局部变量表]()
+- [栈帧](https://github.com/RodJohn/JVM/edit/master/md/362_StackFrame.md)
+- - [局部变量表](https://github.com/RodJohn/JVM/blob/master/md/363_LocalVarableTable.md)
+
 - [方法调用]()
-- - [解析]() 
-- - [分派]() 
-- [基于栈的解释执行引擎]() 
+- - [解析](https://github.com/RodJohn/JVM/blob/master/md/366_Resolution.md) 
+- - [分派](https://github.com/RodJohn/JVM/blob/master/md/367_dispatch.md) 
+- [基于栈的解释执行引擎](https://github.com/RodJohn/JVM/blob/master/md/369_EngineOnSatck.md) 
   
 
 
