@@ -85,8 +85,8 @@
 
 - [栈帧](https://github.com/RodJohn/JVM/edit/master/md/362_StackFrame.md)
 - - [局部变量表](https://github.com/RodJohn/JVM/blob/master/md/363_LocalVarableTable.md)
-
-- [方法调用]()
+- - [操作数栈、动态链接、返回地址](https://github.com/RodJohn/JVM/blob/master/md/364_OperandStack.md)
+- [方法调用](https://github.com/RodJohn/JVM/blob/master/md/365_MethodCall.md)
 - - [解析](https://github.com/RodJohn/JVM/blob/master/md/366_Resolution.md) 
 - - [分派](https://github.com/RodJohn/JVM/blob/master/md/367_dispatch.md) 
 - [基于栈的解释执行引擎](https://github.com/RodJohn/JVM/blob/master/md/369_EngineOnSatck.md) 
