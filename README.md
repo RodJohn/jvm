@@ -11,6 +11,9 @@
     Java程序性能优化
     http://www.iocoder.cn/Books/Java-Virtual-Machine-books-recommended/
     
+    博客
+    https://blog.csdn.net/u010349169/column/info/jvm-principle
+    
     
     
 # 运行时数据区
@@ -77,7 +80,7 @@
 - - [链接阶段](https://github.com/RodJohn/JVM/blob/master/md/312_linkstage.md)
 - - [初始化阶段](https://github.com/RodJohn/JVM/blob/master/md/313_initstage.md)
 - [类加载器](https://github.com/RodJohn/JVM/blob/master/md/320_ClassLoder.md)
-- - []()
+- - [双亲委派]()
 
        
 
@@ -89,8 +92,13 @@
 - [方法调用](https://github.com/RodJohn/JVM/blob/master/md/365_MethodCall.md)
 - - [解析](https://github.com/RodJohn/JVM/blob/master/md/366_Resolution.md) 
 - - [分派](https://github.com/RodJohn/JVM/blob/master/md/367_dispatch.md) 
-- [基于栈的解释执行引擎](https://github.com/RodJohn/JVM/blob/master/md/369_EngineOnSatck.md) 
+- - [虚方法表](https://github.com/RodJohn/JVM/blob/master/md/368_MethodTable.md)
+- 基于栈的解释执行引擎
+- - [编译解析执行](https://github.com/RodJohn/JVM/blob/master/md/370_AnalyticalExecution.md)
+- - [基于栈的解释执行引擎](https://github.com/RodJohn/JVM/blob/master/md/369_EngineOnSatck.md)
   
+- [动态代理]()
+
 
 
 # 优化
