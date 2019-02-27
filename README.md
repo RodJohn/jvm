@@ -1,19 +1,13 @@
 
+# Index
 
-
-
-# 参考
-
-    深入理解Java虚拟街（JVM高级特性与最佳实践）
-     实战Java虚拟机JVM故障诊断与性能优化
-     深入理解JVM ＆ G1 GC
-     揭秘Java虚拟机
-    Java程序性能优化
-    http://www.iocoder.cn/Books/Java-Virtual-Machine-books-recommended/
-    
-    博客
-    https://blog.csdn.net/u010349169/column/info/jvm-principle
-    
+    jvm
+ 
+- 主列表1
+- 主列表2
+  1. 次列表1
+  2. 次列表2
++ 主列表3
     
     
 # 运行时数据区
@@ -24,8 +18,8 @@
 - [本地方法栈](https://github.com/RodJohn/JVM/blob/master/md/204_%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95%E6%A0%88.md)
 - [堆](https://github.com/RodJohn/JVM/blob/master/md/205_%E5%A0%86.md)
 - [方法区](https://github.com/RodJohn/JVM/blob/master/md/206_%E6%96%B9%E6%B3%95%E5%8C%BA.md)
-- - [运行时常量池](https://github.com/RodJohn/JVM/blob/master/md/208_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0.md)
-- - [运行时常量池实例](https://github.com/RodJohn/JVM/blob/master/md/209_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%AE%9E%E4%BE%8B.md)
+- -[运行时常量池](https://github.com/RodJohn/JVM/blob/master/md/208_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0.md)
+- -[运行时常量池实例](https://github.com/RodJohn/JVM/blob/master/md/209_%E8%BF%90%E8%A1%8C%E6%97%B6%E5%B8%B8%E9%87%8F%E6%B1%A0%E5%AE%9E%E4%BE%8B.md)
 - [直接内存](https://github.com/RodJohn/JVM/blob/master/md/207_%E7%9B%B4%E6%8E%A5%E5%86%85%E5%AD%98.md)
 - [内存错误](https://github.com/RodJohn/JVM/blob/master/md/210_%E5%86%85%E5%AD%98%E9%94%99%E8%AF%AF.md)
 
@@ -130,6 +124,16 @@
 
 
 
+
 # 参考
 
-    JVM 作用 隔绝了物理
+    深入理解Java虚拟街（JVM高级特性与最佳实践）
+     实战Java虚拟机JVM故障诊断与性能优化
+     深入理解JVM ＆ G1 GC
+     揭秘Java虚拟机
+    Java程序性能优化
+    http://www.iocoder.cn/Books/Java-Virtual-Machine-books-recommended/
+    
+    博客
+    https://blog.csdn.net/u010349169/column/info/jvm-principle
+ 
