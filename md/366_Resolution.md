@@ -36,8 +36,36 @@
  
 # 示例
 
+代码
+  
+    class Father {
+        public static void print(String str) {
+            System.out.println("father " + str);
+        }
 
-     
+        private void show(String str) {
+            System.out.println("father " + str);
+        }
+    }
+
+    class Son extends Father {
+
+    }
+
+    public class Test {
+        public static void main(String[] args) {
+            Son.print("coder");
+            //Father fa = new Father();
+            //fa.show("cooooder");
+        }
+    }
+
+运行结果
+
+　　fatcher coder
+
+　　说明：Son.print实际上调用的是Father的print方法，print方法与Father类型是相关的，
+
      
      
   
