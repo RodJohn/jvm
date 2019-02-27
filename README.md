@@ -103,10 +103,12 @@
 
 # 优化
 
-编译器优化
+- - [javac编译器](https://github.com/RodJohn/JVM/blob/master/md/510_javac.md)
+- - [语法糖](https://github.com/RodJohn/JVM/blob/master/md/514_Sugar.md)
 
-运行期优化
-
+- [即时编译](https://github.com/RodJohn/JVM/blob/master/md/520_JIT.md)
+- - [HotSpots即时编译器](https://github.com/RodJohn/JVM/blob/master/md/522_HotSpotC1C2.md)
+- - [公共表达式消除、方法内联、数组检测消除、栈上逃逸](https://github.com/RodJohn/JVM/blob/master/md/526_optimization.md)
 
 # 调优
     
