@@ -39,14 +39,10 @@
 ## descriptor_index
 
 	描述符用于描述字段的数据类型
+	1同于常量池中的
 	
 
-	对于数组类型，
-	每一维度将使用一个前置的“[”字符来描述，
-	如一个整数数组“int [][]”将为记录为“[[I”，
-	而一个String类型的数组“String[]”将被记录为“[Ljava/lang/String”
 
-![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable3.png)  
 
 
 ## attribute
