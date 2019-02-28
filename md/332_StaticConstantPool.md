@@ -50,6 +50,16 @@
 
 ![](https://github.com/RodJohn/JVM/blob/master/img/StaticConstantPool2.png)
 
+# 常用
+
+NameAndType
+
+	对于数组类型，
+	每一维度将使用一个前置的“[”字符来描述，
+	如一个整数数组“int [][]”将为记录为“[[I”，
+	而一个String类型的数组“String[]”将被记录为“[Ljava/lang/String”
+
+![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable3.png)  
 
 # 示例
 
