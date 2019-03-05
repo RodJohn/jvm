@@ -17,14 +17,33 @@
  - - [版本号](https://github.com/RodJohn/jvm/blob/master/md/337_VersionNumber.md)
  - - [静态常量池](https://github.com/RodJohn/jvm/blob/master/md/332_StaticConstantPool.md)
  - - [访问标识](https://github.com/RodJohn/jvm/blob/master/md/338_AccessFlag.md)
- - - [继承关系](https://github.com/RodJohn/jvm/blob/master/md/340_inherite.md)
+ - - [继承信息](https://github.com/RodJohn/jvm/blob/master/md/340_inherite.md)
  - - [字段表](https://github.com/RodJohn/jvm/blob/master/md/333_FiledTable.md)
  - - [方法表](https://github.com/RodJohn/jvm/blob/master/md/335_MethodTable.md)
  - - - [code](https://github.com/RodJohn/jvm/blob/master/md/336_Code.md)
  - [字节码指令]()
  - - []()
- - [ASM]()
  
+ # 字节码操作
+ 
+ - [ASM]()
+ - [JavaAgent]
+ 
+ # 执行引擎
+
+- [栈帧](https://github.com/RodJohn/JVM/edit/master/md/362_StackFrame.md)
+- - [局部变量表](https://github.com/RodJohn/JVM/blob/master/md/363_LocalVarableTable.md)
+- - [操作数栈、动态链接、返回地址](https://github.com/RodJohn/JVM/blob/master/md/364_OperandStack.md)
+- [方法调用](https://github.com/RodJohn/JVM/blob/master/md/365_MethodCall.md)
+- - [解析](https://github.com/RodJohn/JVM/blob/master/md/366_Resolution.md) 
+- - [分派](https://github.com/RodJohn/JVM/blob/master/md/367_dispatch.md) 
+- - [虚方法表](https://github.com/RodJohn/JVM/blob/master/md/368_MethodTable.md)
+- 基于栈的解释执行引擎
+- - [编译解析执行](https://github.com/RodJohn/JVM/blob/master/md/370_AnalyticalExecution.md)
+- - [基于栈的解释执行引擎](https://github.com/RodJohn/JVM/blob/master/md/369_EngineOnSatck.md)
+  
+- [动态代理]()
+
 
 # <a name="类加载">类加载</a>
 
@@ -56,20 +75,32 @@
 
 # 垃圾回收
 
- - [垃圾回收](https://github.com/RodJohn/JVM/blob/master/md/220_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6.md)  
- - 存活判断算法
- - - [引用计数、可达性分析算法](https://github.com/RodJohn/JVM/edit/master/md/221_%E5%AD%98%E6%B4%BB%E7%AE%97%E6%B3%95.md)     
- - - [可达性分析法实现](https://github.com/RodJohn/JVM/blob/master/md/225_%E5%8F%AF%E8%BE%BE%E6%80%A7%E5%88%86%E6%9E%90%E6%B3%95%E5%AE%9E%E7%8E%B0.md)
- - 回收算法
- - - [标记清除、复制、标记整理算法](https://github.com/RodJohn/JVM/blob/master/md/224_%E5%9F%BA%E7%A1%80%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95.md)
- - - [分代收集算法](https://github.com/RodJohn/JVM/blob/master/md/229_%E5%88%86%E4%BB%A3%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95.md)
- 
- - [垃圾回收器](https://github.com/RodJohn/JVM/edit/master/md/226_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8.md)
- - - [serial、parnew、parallel scravenge](https://github.com/RodJohn/JVM/blob/master/md/230_%E6%96%B0%E7%94%9F%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8.md)
- - - [serialOld、paralleOld、CMS](https://github.com/RodJohn/JVM/blob/master/md/231_%E8%80%81%E5%B9%B4%E4%BB%A3%E6%94%B6%E9%9B%86%E5%99%A8.md)
+- 存活判断
+- - [引用计数法](https://github.com/RodJohn/jvm/blob/master/md/221_ReferenceCounting.md)
+- - [可达性分析法](https://github.com/RodJohn/jvm/blob/master/md/222_ReachabilityAnalysis.md)
+- 垃圾回收
+- - [标记清除、复制、标记整理](https://github.com/RodJohn/jvm/blob/master/md/224_collction.md)
+- - [分代收集](https://github.com/RodJohn/jvm/blob/master/md/229_GenerationCollection.md)
+- STW
+- - [HotSpot实现](https://github.com/RodJohn/jvm/blob/master/md/225_HotSpotImplement.md)
+
+
+
+ - [垃圾回收器]()
+ - - [新生代收集器](https://github.com/RodJohn/jvm/blob/master/md/230_YoungCollectors.md)
+ - - [年老带收集器]()
  
  - [G1](https://github.com/RodJohn/JVM/blob/master/md/227_G1.md)
  - [finalize]()  
+ 
+ - - [分区收集]()
+
+
+
+引用类型
+finalize
+
+
  
  # 对象分配
  
@@ -89,20 +120,6 @@
 
      
 
-# 执行引擎
-
-- [栈帧](https://github.com/RodJohn/JVM/edit/master/md/362_StackFrame.md)
-- - [局部变量表](https://github.com/RodJohn/JVM/blob/master/md/363_LocalVarableTable.md)
-- - [操作数栈、动态链接、返回地址](https://github.com/RodJohn/JVM/blob/master/md/364_OperandStack.md)
-- [方法调用](https://github.com/RodJohn/JVM/blob/master/md/365_MethodCall.md)
-- - [解析](https://github.com/RodJohn/JVM/blob/master/md/366_Resolution.md) 
-- - [分派](https://github.com/RodJohn/JVM/blob/master/md/367_dispatch.md) 
-- - [虚方法表](https://github.com/RodJohn/JVM/blob/master/md/368_MethodTable.md)
-- 基于栈的解释执行引擎
-- - [编译解析执行](https://github.com/RodJohn/JVM/blob/master/md/370_AnalyticalExecution.md)
-- - [基于栈的解释执行引擎](https://github.com/RodJohn/JVM/blob/master/md/369_EngineOnSatck.md)
-  
-- [动态代理]()
 
 
 
