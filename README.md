@@ -11,12 +11,14 @@
 
 # <a name="Class文件">Class文件</a>
 
- - [Class文件](https://github.com/RodJohn/JVM/blob/master/md/330_ClassFile.md)
- - - [魔数、版本号](https://github.com/RodJohn/JVM/blob/master/md/337_MagicVersion.md)
- - - [静态常量池](https://github.com/RodJohn/JVM/blob/master/md/332_StaticConstantPool.md)
- - - [访问标识、继承关系](https://github.com/RodJohn/JVM/blob/master/md/338_AccessFlag.md)
- - - [字段表](https://github.com/RodJohn/JVM/blob/master/md/333_FiledTable.md)
- - - [方法表](https://github.com/RodJohn/JVM/blob/master/md/335_MethodTable.md)
+ - [文件结构](https://github.com/RodJohn/JVM/blob/master/md/330_ClassFile.md)
+ - - [魔数](https://github.com/RodJohn/jvm/blob/master/md/339_MagicNumber.md)
+ - - [版本号](https://github.com/RodJohn/jvm/blob/master/md/337_VersionNumber.md)
+ - - [静态常量池](https://github.com/RodJohn/jvm/blob/master/md/332_StaticConstantPool.md)
+ - - [访问标识](https://github.com/RodJohn/jvm/blob/master/md/338_AccessFlag.md)
+ - - [继承关系](https://github.com/RodJohn/jvm/blob/master/md/340_inherite.md)
+ - - [字段表](https://github.com/RodJohn/jvm/blob/master/md/333_FiledTable.md)
+ - - [方法表](https://github.com/RodJohn/jvm/blob/master/md/335_MethodTable.md)
  - [字节码指令]()
  - - []()
  
