@@ -1,23 +1,17 @@
 # 分代收集算法
 
-概述
-
-    Generational Collection（分代收集）算法
-    
-原理
-
-    根据对象存活的特点进行换分区域
-    （一般是堆中划分新生代、老年代和方法区划分永久代，新生代中又会划分为Eden和Surviver区）
-    不同区域用不同回收算法去回收垃圾，提高GC效率
+    根据对象存活的特点划分区域
+    不同区域用不同回收算法回收垃圾，提高GC效率
     是目前大部分JVM的垃圾收集器采用的算法
     
 
-图解
+# 区域划分
+
 
 ![](https://github.com/RodJohn/JVM/blob/master/img/gc%E5%88%86%E4%BB%A3%E7%A9%BA%E9%97%B4.png)
 
 
-## 新生代
+# 新生代
 
 算法
 
@@ -25,7 +19,6 @@
 
 过程
 
-    新生代由Eden区，From Survivor区，To Survivor区组成，比例一般8:1:1  
     GC开始时，对象只会存在于Eden区和From Survivor区，To Survivor区是空的（作为保留区域）。
     GC进行时，Eden区中所有存活的对象都会被复制到To Survivor区，
     而在From Survivor区中，
@@ -45,18 +38,18 @@
 
 
 
-## 年老带
+# 年老带
 
 特点
 
     对象存活时间长
-    采用Mark-Compact算法
+    采用Mark-Compact、MarkSweep 算法
 
 过程
 
     如果年老带内存不够，就会发起fullGc，对整个堆空间进行回收，会引起长时间的STW
 
-## 永久代
+# 永久代
 
     永久代主要是回收废弃常量和无用的类
 
