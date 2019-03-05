@@ -61,6 +61,11 @@ NameAndType
 
 ![](https://github.com/RodJohn/JVM/blob/master/img/ClassFileTable3.png)  
 
+	方法描述
+	由参数列表（类型/顺序）和返回值组成
+	基本格式为：(参数数据类型描述列表)返回值数据类型  
+	如方法 int getIndex(String name,char[] tgc,int start,int end,char target)的描述符为“（Ljava/lang/String[CIIC）I”。
+
 # 示例
 
 源码
