@@ -7,6 +7,7 @@
 <a href="#Class文件">Class文件</a>
 
 
+<a href="#类加载">类加载</a>
 
 
 # <a name="Class文件">Class文件</a>
@@ -19,11 +20,25 @@
  - - [继承关系](https://github.com/RodJohn/jvm/blob/master/md/340_inherite.md)
  - - [字段表](https://github.com/RodJohn/jvm/blob/master/md/333_FiledTable.md)
  - - [方法表](https://github.com/RodJohn/jvm/blob/master/md/335_MethodTable.md)
+ - - - [code](https://github.com/RodJohn/jvm/blob/master/md/336_Code.md)
  - [字节码指令]()
  - - []()
+ - [ASM]()
  
 
+# <a name="类加载">类加载</a>
 
+- [类加载](https://github.com/RodJohn/jvm/blob/master/md/310_ClassLoad.md)
+- - [加载阶段](https://github.com/RodJohn/JVM/blob/master/md/311_loadstage.md)
+- - [链接阶段](https://github.com/RodJohn/JVM/blob/master/md/312_linkstage.md)
+- - [初始化阶段](https://github.com/RodJohn/JVM/blob/master/md/313_initstage.md)
+- - [加载时机](https://github.com/RodJohn/jvm/blob/master/md/314_LoadTime.md)
+- [类加载器](https://github.com/RodJohn/JVM/blob/master/md/320_ClassLoder.md)
+- - [双亲委派](https://github.com/RodJohn/jvm/blob/master/md/321_ParentDelegate.md)
+- - [破坏双亲委派](https://github.com/RodJohn/jvm/blob/master/md/322_AntiParentDelegate.md)
+- [热加载](https://github.com/RodJohn/jvm/blob/master/md/323_HotLoding.md)
+
+  
     
     
 # 运行时数据区
@@ -72,17 +87,7 @@
 
 
 
-    
-# 类加载
-
-- [类加载](https://github.com/RodJohn/JVM/blob/master/md/310_ClassLoad.md)
-- - [加载阶段](https://github.com/RodJohn/JVM/blob/master/md/311_loadstage.md)
-- - [链接阶段](https://github.com/RodJohn/JVM/blob/master/md/312_linkstage.md)
-- - [初始化阶段](https://github.com/RodJohn/JVM/blob/master/md/313_initstage.md)
-- [类加载器](https://github.com/RodJohn/JVM/blob/master/md/320_ClassLoder.md)
-- - [双亲委派]()
-
-       
+     
 
 # 执行引擎
 
