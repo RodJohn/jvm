@@ -54,6 +54,8 @@ static
     
 # 示例
 
+	-XX:+TraceClassLoading参数可以跟踪显示类加载
+
 one
 
 ```
@@ -79,13 +81,19 @@ public class T6 {
     }
 }
 
+[Loaded test.T6 from file:/C:/Users/rod_j/Documents/workspace-spring-tool-suite-4-4.1.2.RELEASE/test/bin/]
+[Loaded sun.launcher.LauncherHelper$FXHelper from C:\Program Files\Java\jre1.8.0_201\lib\rt.jar]
+[Loaded java.lang.Class$MethodArray from C:\Program Files\Java\jre1.8.0_201\lib\rt.jar]
+[Loaded java.lang.Void from C:\Program Files\Java\jre1.8.0_201\lib\rt.jar]
 Test init 
+[Loaded test.Super from file:/C:/Users/rod_j/Documents/workspace-spring-tool-suite-4-4.1.2.RELEASE/test/bin/]
+[Loaded test.Suber from file:/C:/Users/rod_j/Documents/workspace-spring-tool-suite-4-4.1.2.RELEASE/test/bin/]
 Super init 
+[Loaded java.lang.Shutdown from C:\Program Files\Java\jre1.8.0_201\lib\rt.jar]
+[Loaded java.lang.Shutdown$Lock from C:\Program Files\Java\jre1.8.0_201\lib\rt.jar]
 
 对于访问静态字段，只有直接定义这个字段的类才被初始化，
 因此通过子类来引用父类中定义的静态字段，只会触发父类的初始化而不会触发子类的初始化。
-
--XX:+TraceClassLoading参数可以跟踪显示类加载机制
 
 ```
 
