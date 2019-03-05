@@ -3,9 +3,8 @@
 作用
 
 	描述类的方法
-	包括编译器自动添加的，
-	 是类构造器“<clinit>”方法和实例构造器"<init>"方法。
-	 子类重写的父类方法
+	包括编译器自动添加的(如。类构造器“<clinit>”方法和实例构造器"<init>"方法)
+	子类重写的父类方法
   	不包括从父类或父接口继承的方法
 
 结构
@@ -34,10 +33,7 @@
 
 ## descriptor_index
 
-	方法描述
-	由参数列表（类型/顺序）和返回值组成
-	基本格式为：(参数数据类型描述列表)返回值数据类型  
-	如方法 int getIndex(String name,char[] tgc,int start,int end,char target)的描述符为“（Ljava/lang/String[CIIC）I”。
+	类似静态常量池中的NameAndType的描述
 
 ### 重载
 
