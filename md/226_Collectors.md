@@ -5,7 +5,8 @@
     
     Serial、ParNew、Parallel Scavenge用于新生代；
     CMS、Serial Old、Paralled Old用于老年代。
-    并且他们相互之间以相对固定的组合使用（具体组合关系如上图）。G1是一个独立的收集器不依赖其他6种收集器。ZGC是目前JDK 11的实验收集器。
+    并且他们相互之间以相对固定的组合使用（具体组合关系如上图）。
+    G1是一个独立的收集器不依赖其他6种收集器。ZGC是目前JDK 11的实验收集器。
 
 
 ![](https://github.com/RodJohn/JVM/blob/master/img/gccollectors.png)
