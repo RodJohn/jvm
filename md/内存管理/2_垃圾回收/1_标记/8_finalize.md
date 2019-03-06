@@ -1,16 +1,34 @@
 
- # 死亡标记与拯救
+ # finalize
  
- 在可达性算法中不可达的对象，并不是“非死不可”的，要真正宣告一个对象死亡，至少要经历两次标记的过程。
-如果对象在进行可达性分析之后，没有与GC Roots相连接的引用链，它会被第一次标记，并进行筛选，筛选的条件是此对象是否有必要执行finalize()方法。
-执行finalize()方法的两个条件：
-1、重写了finalize()方法。
-2、finalize()方法之前没被调用过，因为对象的finalize()方法只能被执行一次。
-如果满足以上两个条件，这个对象将会放置在F-Queue的队列之中，并在稍后由一个虚拟机自建的、低优先级Finalizer线程来执行它。
-对象的“自我拯救”
-finalize()方法是对象脱离死亡命运最后的机会，如果对象在finalize()方法中重新与引用链上的任何一个对象建立关联即可，比如把自己（this关键字）赋值给某个类变量或对象的成员变量。
+第一次标记
+ 
+    如果对象被可达性分析算法判定死亡，它会被第一次标记
+    然后JVM会判断对象是否有必要执行finalize()方法。
 
-  public class FinalizeDemo {
+判定是否执行finalize
+
+    执行finalize()方法的两个条件：
+    1、重写了finalize()方法。
+    2、finalize()方法之前没被调用过，因为对象的finalize()方法只能被执行一次。
+
+执行finalize
+
+    如果满足以上两个条件，这个对象将会放置在F-Queue的队列之中，
+    并在稍后由一个虚拟机自建的、低优先级Finalizer线程来执行它finalize方法。
+    
+对象的“自我拯救”
+
+    finalize()方法是对象脱离死亡命运最后的机会，
+    如果对象在finalize()方法中重新与引用链上的任何一个对象建立关联即可，
+    比如把自己（this关键字）赋值给某个类变量或对象的成员变量。
+
+
+# 示例
+
+代码
+
+    public class FinalizeDemo {
       public static FinalizeDemo Hook = null;
       @Override
       protected void finalize() throws Throwable {
@@ -39,13 +57,13 @@ finalize()方法是对象脱离死亡命运最后的机会，如果对象在fina
               System.out.println("我已经死了");
           }
       }
-  }
+    }
 
-执行的结果：
+结果
 
-执行finalize方法
-我还活着
-我已经死了
+    执行finalize方法
+    我还活着
+    我已经死了
 
 从结果可以看出，任何对象的finalize()方法都只会被系统调用一次。
 不建议使用finalize()方法来拯救对象 ，原因如下：
