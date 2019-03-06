@@ -86,20 +86,16 @@
 
 
 
- - [垃圾回收器]()
+ - [垃圾回收器](https://github.com/RodJohn/jvm/blob/master/md/226_Collectors.md)
  - - [新生代收集器](https://github.com/RodJohn/jvm/blob/master/md/230_YoungCollectors.md)
- - - [年老带收集器]()
+ - - [年老带收集器](https://github.com/RodJohn/jvm/blob/master/md/231_OldCollectors.md)
+ 
  
  - [G1](https://github.com/RodJohn/JVM/blob/master/md/227_G1.md)
- - [finalize]()  
- 
  - - [分区收集]()
-
-
 
 引用类型
 finalize
-
 
  
  # 对象分配
