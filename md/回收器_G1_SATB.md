@@ -1,14 +1,66 @@
 
+# 概述
+
+G1使用处理三色标记中的漏标
+
+
 
 
 # 问题
 
 
-https://www.jianshu.com/p/548c67aa1bc0
-
-
 对于第一种情况，利用post-write barrier，记录所有新增的引用关系，然后根据这些引用关系为根重新扫描一遍
 对于第二种情况，利用pre-write barrier，将所有即将被删除的引用关系的旧引用记录下来，最后以这些旧引用为根重新扫描一遍
+
+
+# 漏标处理
+
+
+# SATB
+
+  SATB处理误标
+SATB全称snapshot-at-the-beginning，由Taiichi Yuasa为增量式标记清除垃圾收集器开发的一个算法，
+主要应用于垃圾收集的并发标记阶段，
+解决了CMS垃圾收集器重新标记阶段长时间STW的潜在风险。
+
+
+## 原理 
+
+结构
+
+![](https://github.com/RodJohn/jvm/blob/master/img/STAB.png)
+
+    Region包含了5个指针，分别是bottom、previous TAMS、next TAMS、top和end，  
+    其中top是该region的当前分配指针，[bottom, top)是当前该region已用（used）的部分，[top, end)是尚未使用的可分配空间（unused）。
+    (1): [bottom, prevTAMS): 这部分里的对象存活信息可以通过prevBitmap来得知
+    (2): [prevTAMS, nextTAMS): 这部分里的对象在第n-1轮concurrent marking是隐式存活的
+    (3): [nextTAMS, top): 这部分里的对象在第n轮concurrent marking是隐式存活的
+
+
+    第n轮并发标记开始，将该Region当前的top指针赋值给next TAMS，  
+    在并发标记标记期间，分配的对象都在[next TAMS, top]之间，  
+    SATB能够确保这部分的对象都会被标记，默认都是存活的 
+
+2、当并发标记结束时，将next TAMS所在的地址赋值给previous TAMS，SATB给 [bottom, previous TAMS] 之间的对象创建一个快照Bitmap，所有垃圾对象能通过快照被识别出来
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+利用post-write barrier，记录所有新增的引用关系，然后根据这些引用关系为根重新扫描一遍
 
 ## pre-write barrier
 
@@ -26,29 +78,21 @@ CMS的incremental update设计使得它在remark阶段必须重新扫描所有�
 G1的SATB设计在remark阶段则只需要扫描剩下的satb_mark_queue ，解决了CMS垃圾收集器重新标记阶段长时间STW的潜在风险。"
 
 
-# SATB
+# 误标处理
 
-SATB全称snapshot-at-the-beginning，由Taiichi Yuasa为增量式标记清除垃圾收集器开发的一个算法，
-主要应用于垃圾收集的并发标记阶段，
-解决了CMS垃圾收集器重新标记阶段长时间STW的潜在风险。
 
-SATB的方式记录活对象，也就是那一时刻对象snapshot,
-但是在之后这里面的对象可能会变成垃圾, 叫做浮动垃圾（floating garbage），这种对象只能等到下一次收集回收掉。
-在GC过程中新分配的对象都当做是活的，其他不可达的对象就是死的。
 
-解决了CMS垃圾收集器重新标记阶段长时间STW的潜在风险
 
 
 
 
 # 标记新对象
 
-
-https://www.jianshu.com/p/548c67aa1bc0
-
-
 如何知道哪些对象是GC开始之后新分配的呢？
 在Region中通过top-at-mark-start（TAMS）指针，分别为prevTAMS和nextTAMS来记录新配的对象。示意图如下：
 
-https://www.jianshu.com/p/9e70097807ba
 
+
+# 参考
+
+https://www.jianshu.com/p/548c67aa1bc0
