@@ -1,4 +1,8 @@
 
+
+回收优化
+
+
 # 空间碎片
 
 ## 原因
@@ -18,7 +22,7 @@
     
     可以设置执行多少次不压缩的Full GC后，跟着来一次带压缩的
     
-参数
+## 参数
     
     UseCMSCompactAtFullCollection 开启碎片整理
         (默认开启，但不会进行，结合下面的CMSFullGCsBeforeCompaction)，
@@ -39,7 +43,7 @@
     
 ## 解决
 
-    设置回收阈值（MSInitiatingOccupancyFraction）
+    设置回收阈值
     达到百分比就进行垃圾回收。
     导致内存使用率下降
 
@@ -56,7 +60,15 @@
     此时新生代大小一般是堆的60%
     加长分代年龄减少对象进入老年代的速率        
     该值设置为80%
-    
+ 
+ 
+## 参数
+
+    -XX:CMSInitiatingOccupancyFraction  设置回收阈值
+	-XX:+UseCMSInitiatingOccupancyOnly  设置阈值不变化
+		如果不指定,JVM仅在第一次使用设定值,后续则自动调整
+   
+   
 # 抢占CPU资源
     
 ## 原因
