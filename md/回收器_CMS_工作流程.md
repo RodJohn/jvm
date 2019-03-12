@@ -1,5 +1,13 @@
 
 
+# 触发条件
+
+老年代使用率达到阈值（周期性检查触发）
+新生代的晋升担保失败（立刻触发）
+永久代的使用率达到阈值(jdk8不考虑)
+
+
+
 # 工作流程
 
 ![](https://github.com/RodJohn/JVM/blob/master/img/gccms.png)
