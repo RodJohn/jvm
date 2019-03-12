@@ -27,7 +27,7 @@
     UseCMSCompactAtFullCollection 开启碎片整理
         (默认开启，但不会进行，结合下面的CMSFullGCsBeforeCompaction)，
     CMSFullGCsBeforeCompaction  设置整理频率
-        (默认为0，每次进入Full GC时都进行碎片整理）。
+        (默认为0，每次进入Full GC时都进行碎片整理，推荐使用便于排查问题）。
 
     
 
