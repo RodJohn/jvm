@@ -10,12 +10,12 @@
 
     将Python对象的引用计数器复制为记录值(根不是Python对象)
  
- ![](https://github.com/RodJohn/jvm/blob/master/img/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%951.png)
+![](https://github.com/RodJohn/jvm/blob/master/img/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%951.png)
  
  
     对Python对象执行部分标记清除算法
     
 
- ![](https://github.com/RodJohn/jvm/blob/master/img/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952.png)
+![](https://github.com/RodJohn/jvm/blob/master/img/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%952.png)
  
     清除标记值为0的对象
