@@ -1,4 +1,12 @@
 
+
+# 常用参数
+
+垃圾回收统计信息 XX:+PrintGC -XX:+PrintGCDetails -XX:+PrintGCTimeStamps
+
+-XX:PrintHeapAtGC: 打印GC前后的详细堆栈信息。输出形式： 
+-Xloggc:filename:与上面几个配合使用，把相关日志信息记录到文件以便分析。
+
 # 日志示例
 
 ## 
