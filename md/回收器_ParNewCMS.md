@@ -15,6 +15,9 @@
 
 # 正常参数
 
+堆内存 3G以上比较好  
+2核 4G 
+
 CMSGC 24小时内一次  每次小于200毫秒
 
 YGC  
@@ -25,7 +28,7 @@ YGC
 InitMark 老年代存活比例 简介反映碎片状态
 Remark 老年代存活比例 反映饱和状态
 
-堆内存 3G以上比较好
+
 
 # CMSGC时间过长
 
@@ -42,6 +45,7 @@ Remark 老年代存活比例 反映饱和状态
 
 处理
 
+	
 	开启Remark前强制YGC（-XX:+CMSScavengeBeforeRemark）
 
 ## SWAP 区域 
@@ -117,4 +121,5 @@ Remark 老年代存活比例 反映饱和状态
 
 https://www.cnblogs.com/Jaxlinda/p/7145912.html  定时任务
 https://jjhpeopl.iteye.com/blog/2330447  excel对象过大
+https://blueswind8306.iteye.com/blog/1194438  完整优化
 
