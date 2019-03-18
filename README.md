@@ -3,24 +3,11 @@
 # [思维导图](https://www.processon.com/view/link/5c81d1b1e4b0d1a5b0f62958)
 
 
+# 学习路径
 
+《深入理解Java虚拟街（JVM高级特性与最佳实践）》 -- 周志明
 
-
-
-
-# 并发
-
-    内存模型
-    
-        https://www.jianshu.com/p/a463e23aedd5
-    
-    参考
-        https://juejin.im/post/5c67d4f7e51d45403f2a9fd5
-        https://www.hollischuang.com/archives/1003
-
-
-
-
+《垃圾回收的算法与实现》
 
 
 # 参考
