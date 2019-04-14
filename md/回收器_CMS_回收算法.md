@@ -39,7 +39,7 @@
     在并发清除时，用户线程新产生的垃圾，称为浮动垃圾
     这使得并发清除时需要预留一定的内存空间，
     否则线程申请不到足够空间，就会产生Concurrent  Mode Failure错误，
-    进而jvm将使用SerialOld回收器进行FullGC
+    进而jvm将使用SerialOld回收，导致长时间的暂停
     
     
 ## 解决
