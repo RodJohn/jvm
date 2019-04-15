@@ -1,5 +1,10 @@
 
 
+YGC前后新生代变大
+http://lovestblog.cn/blog/2016/05/18/ygc-worse/
+
+
+
 # concurrent mode failure
 
 
