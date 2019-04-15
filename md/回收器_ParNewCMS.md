@@ -23,10 +23,12 @@
 	-XX:SurvivorRatio=8 
 	-XX:MaxTenuringThreshold=9 
 	-Xss256k
-	-XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m 
+
 
 	-XX:PermSize=256m 
 	-XX:MaxPermSize=256m 
+	-XX:MetaspaceSize=256m 
+	-XX:MaxMetaspaceSize=256m 
 	-XX:+CMSPermGenSweepingEnabled 
 	-XX:CMSInitiatingPermOccupancyFraction=80
 	-XX:+CMSClassUnloadingEnabled 
