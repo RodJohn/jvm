@@ -39,7 +39,7 @@
 	-XX:+UseCMSCompactAtFullCollection 
 	-XX:CMSFullGCsBeforeCompaction=9 
 	-XX:+CMSParallelRemarkEnabled 
-	-XX:+CMSScavengeBeforeRemark 
+	//-XX:+CMSScavengeBeforeRemark 
 	-XX:+ScavengeBeforeFullGC 
 	-XX:ParallelGCThreads=20 
 
@@ -95,7 +95,7 @@ CMS
 	-XX:ParallelGCThreads=8 			   最大GC线程数
 	-XX:+CMSParallelRemarkEnabled          CMSremark并行处理
 	-XX:+ScavengeBeforeFullGC 			   OGC进行一次YGC，默认开启。
-	-XX:+CMSScavengeBeforeRemark 		   CMSremark之前进行一次YGC
+	-XX:+CMSScavengeBeforeRemark 		   CMSremark之前进行一次YGC(不推荐)
 
 
 
