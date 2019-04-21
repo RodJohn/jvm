@@ -20,14 +20,10 @@
         输出完整的main class或者jar
     -v
         输出传递给JVM的参数
-        
-示例
-    
-    jps -l
+常用
 
-    28729 sun.tools.jps.Jps
-    23789 com.asiainfo.aimc.bossbi.BossMain
-    23651 com.caucho.server.resin.Resin                     
+	jps -lv 
+	
     
 # jinfo
 
@@ -46,6 +42,10 @@
     -flag <name>=<value> 
         设置指定参数的值
 
+常用
+
+	jinfo pid -- 列出JVM启动参数和system.properties
+	
             
 # jmap
 
@@ -62,6 +62,9 @@
         -dump:[live,]format=b,file=< filename>
         使用hprof二进制形式,输出jvm的heap内容到文件=. live子选项是可选的，假如指定live选项,那么只输出活的对象到文件。        
 
+常用
+
+	jmap -heap pid  -- 列出当前使用的GC算法，堆的各个区域大小
 
 # jstack
 
@@ -85,25 +88,11 @@
     -gc
     -gccapacity
 
-示例
+常用
 
-    jstat -gc10028 250 20
-    每隔250毫秒，共执行20次
-   
-   S0U	输出Survivor0已用空间的大小。单位KB。	-gc
-   -gcnew
-   S1U	输出Survivor1已用空间的大小。单位KB。
-    S0: Survivor0(新生代Survivor)是空的
-    S1: Survivor1(新生代Survivor)是空的
-    E: Eden(新生代Eden)占用0.38%
-    O: Old(老年代)占用48.24%
-    M:
-    CCS:
-    YGC: Young GC==> Minor GC ==> 新生代GC的次数
-    YGCT: YGC 耗时0.578秒
-    FGC: Full GC==>老年代GC的次数
-    FGCT: FGC总耗时1.067秒
-    GCT: 所有GC总耗时1.645秒
+	jstat -gc pid 1000 3  -- 列出堆的各个区域的大小
+	jstat -gcutil pid 1000 3 -- 列出堆的各个区域使用的比例
+
 
    
 # jconsole
