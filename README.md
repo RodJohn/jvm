@@ -34,3 +34,6 @@ https://blog.csdn.net/column/details/16384.html   （大佬）
 https://www.cnblogs.com/royi123/tag/Java-JVM/
 [郑雨迪的分享](https://time.geekbang.org/column/intro/108)
 
+Java 虚拟机拥有当前最前沿、最成熟的垃圾回收算法实现，以及即时编译器实现
+
+
